@@ -13,13 +13,25 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 257px);
   grid-template-rows: repeat(2, 400px);
-  grid-row-gap: 20px;
+  grid-row-gap: 10px;
   grid-column-gap: 40px;
 }
 
 .grid-item {
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.1) ;
+  border-radius: 3%;
+  position: relative;
+
 }
+
+.placed-image {
+  position: absolute;
+  top: 0px;   /* adjust vertical placement */
+  left: 350px;  /* adjust horizontal placement */
+  width: 100px; /* resize if needed */
+  z-index: 0;
+}
+
 
 .danielClifford {
   display: inline-block;
@@ -67,38 +79,47 @@ body {
 }
 
 .inline-divs {
-  display: inline-block;
-  justify-content: space-between;
-  vertical-align: center; 
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-top: -10px;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
 }
 
 
 .name {
   font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 2px;
+  font-weight: 600;
+  margin-bottom: 0px;
   color: white;
 }
 
 .name2 {
   font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 2px;
+  font-weight: 600;
+  margin-bottom: 0px;
   color: #19212e;
 }
 
 .role {
-  font-size: 1px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: #777;
-  margin-bottom: 12px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .role2 {
-  font-size: 10px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   color: rgb(190, 155, 190);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 .headline {
@@ -107,6 +128,9 @@ body {
   margin-bottom: 12px;
   line-height: 1.4;
   color: white;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
 }
 
 .headline2 {
@@ -115,21 +139,33 @@ body {
   margin-bottom: 12px;
   line-height: 1.4;
   color: rgb(43, 43, 63);
+  margin-top: 10px;
 }
 
 .testimonial {
-  font-size: 15px;
-  font-weight: 400;
-  color: #918f96;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cfcfcf;
   line-height: 1.6;
   padding: 10px;
+  vertical-align: middle;
 }
 
 .testimonial2 {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   color: rgb(190, 155, 190);
   line-height: 1.6;
+  vertical-align: middle;
+}
+
+.testimonial3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #676161;
+  line-height: 1.6;
+  padding: 10px;
+  vertical-align: middle;
 }
 
 .photo {
@@ -141,16 +177,19 @@ body {
   border-radius: 50%;
   border: 3px solid 7541c8;
   margin-right: 20px;
+  width: 40px;
 }
 
 .photograph2 {
   border-radius: 70%;
   border: 3px solid rgb(168, 123, 210);
   margin-right: 20px;
+  width: 40px;
 }
 
 .photograph3 {
   border-radius: 70%;
   border: 3px solid rgb(218, 215, 220);
   margin-right: 20px;
+  width: 40px;
 }
